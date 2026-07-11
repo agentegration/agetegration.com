@@ -1,469 +1,43 @@
 /* ============================================
-   AGE TEGRATION — Design Tokens
-   ============================================ */
-:root {
-  --ink: #0D1512;
-  --ink-2: #0A0F0D;
-  --panel: #141F1B;
-  --panel-line: #24312C;
-  --paper: #F2EFE9;
-  --muted: #93968F;
-  --signal: #FF6B35;
-  --mint: #7FE0C4;
-
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
-
-  --wrap: 1180px;
-}
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
-}
-
-body {
-  margin: 0;
-  background: var(--ink);
-  color: var(--paper);
-  font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-.mono { font-family: var(--font-mono); letter-spacing: 0.02em; }
-
-.wrap {
-  max-width: var(--wrap);
-  margin: 0 auto;
-  padding: 0 28px;
-}
-
-a { color: inherit; text-decoration: none; }
-
-h1, h2, h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  margin: 0;
-  letter-spacing: -0.01em;
-}
-
-.eyebrow {
-  font-size: 12px;
-  color: var(--mint);
-  text-transform: uppercase;
-  margin: 0 0 14px;
-  font-weight: 500;
-}
-
-.section-title {
-  font-size: clamp(28px, 4vw, 42px);
-  line-height: 1.15;
-  max-width: 780px;
-}
-
-::selection { background: var(--signal); color: var(--ink); }
-
-/* Focus visibility */
-a:focus-visible, button:focus-visible {
-  outline: 2px solid var(--mint);
-  outline-offset: 3px;
-}
-
-/* Noise overlay for texture */
-.noise-overlay {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.035;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-}
-
-/* ============================================
-   HEADER
-   ============================================ */
-.site-header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  background: linear-gradient(to bottom, rgba(13,21,18,0.92), rgba(13,21,18,0));
-  backdrop-filter: blur(6px);
-}
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 78px;
-}
-.logo {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: -0.02em;
-}
-.logo span { color: var(--mint); }
-
-.main-nav { display: flex; align-items: center; gap: 32px; }
-.main-nav a {
-  font-size: 14px;
-  color: var(--muted);
-  transition: color 0.2s ease;
-}
-.main-nav a:hover { color: var(--paper); }
-.nav-cta {
-  color: var(--ink) !important;
-  background: var(--mint);
-  padding: 9px 18px;
-  border-radius: 100px;
-  font-weight: 500;
-}
-.nav-cta:hover { background: var(--paper) !important; }
-
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-}
-.nav-toggle span {
-  width: 22px; height: 2px;
-  background: var(--paper);
-}
-
-/* ============================================
-   BUTTONS
-   ============================================ */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 28px;
-  border-radius: 100px;
-  font-size: 15px;
-  font-weight: 500;
-  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
-}
-.btn-primary {
-  background: var(--signal);
-  color: var(--ink);
-}
-.btn-primary:hover { background: var(--mint); transform: translateY(-2px); }
-.btn-ghost {
-  color: var(--paper);
-  border: 1px solid var(--panel-line);
-}
-.btn-ghost:hover { border-color: var(--mint); color: var(--mint); }
-.btn-large { padding: 18px 36px; font-size: 16px; }
-
-/* ============================================
-   HERO
-   ============================================ */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding-top: 78px;
-}
-.hero-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.9;
-}
-.hero-inner {
-  position: relative;
-  z-index: 2;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-.hero-title {
-  font-size: clamp(40px, 7vw, 84px);
-  line-height: 1.02;
-  max-width: 900px;
-}
-.hero-sub {
-  margin-top: 24px;
-  max-width: 560px;
-  font-size: 18px;
-  color: var(--muted);
-}
-.hero-actions {
-  margin-top: 40px;
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-/* ============================================
-   PROCESS THREAD (signature element)
-   ============================================ */
-.process {
-  padding: 140px 0 100px;
-  position: relative;
-}
-.thread {
-  position: relative;
-  margin-top: 80px;
-  padding-left: 60px;
-}
-.thread-line {
-  position: absolute;
-  left: 14px;
-  top: 8px;
-  bottom: 8px;
-  width: 2px;
-  background: var(--panel-line);
-}
-.thread-progress {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 0%;
-  background: var(--mint);
-  transition: height 0.1s linear;
-}
-.thread-step {
-  position: relative;
-  padding: 0 0 72px 40px;
-}
-.thread-step:last-child { padding-bottom: 0; }
-.thread-marker {
-  position: absolute;
-  left: -60px;
-  top: -4px;
-  width: 30px; height: 30px;
-  border-radius: 50%;
-  background: var(--panel);
-  border: 2px solid var(--panel-line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  color: var(--muted);
-  transition: all 0.3s ease;
-}
-.thread-step.active .thread-marker {
-  border-color: var(--mint);
-  color: var(--mint);
-  background: var(--ink);
-  box-shadow: 0 0 0 4px rgba(127,224,196,0.12);
-}
-.thread-content h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-.thread-content p {
-  color: var(--muted);
-  max-width: 480px;
-  margin: 0;
-}
-
-/* ============================================
-   IDEA MOMENT (lightbulb section)
-   ============================================ */
-.idea-moment {
-  position: relative;
-  padding: 160px 0;
-  background: var(--panel);
-  overflow: hidden;
-  text-align: center;
-}
-.idea-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-}
-.idea-inner {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.idea-inner .section-title { max-width: 720px; }
-.idea-sub {
-  margin-top: 20px;
-  color: var(--muted);
-  font-size: 17px;
-  max-width: 480px;
-}
-
-/* ============================================
-   SECTORS
-   ============================================ */
-.sectors { padding: 140px 0; }
-.sector-grid {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-.sector-card {
-  background: var(--panel);
-  border: 1px solid var(--panel-line);
-  border-radius: 16px;
-  padding: 32px;
-  transition: border-color 0.25s ease, transform 0.25s ease;
-}
-.sector-card:hover {
-  border-color: var(--mint);
-  transform: translateY(-4px);
-}
-.sector-tag {
-  font-size: 11px;
-  color: var(--signal);
-}
-.sector-card h3 {
-  font-size: 21px;
-  font-weight: 600;
-  margin: 16px 0 24px;
-  line-height: 1.35;
-}
-.transcript {
-  border-top: 1px solid var(--panel-line);
-  padding-top: 20px;
-  font-size: 13px;
-  line-height: 1.9;
-}
-.transcript p { margin: 0 0 10px; color: var(--paper); }
-.transcript p:last-child { margin-bottom: 0; }
-.t-in { color: var(--muted); margin-right: 8px; }
-.t-agent { color: var(--mint); margin-right: 8px; }
-.t-sys { color: var(--signal); margin-right: 8px; }
-
-/* ============================================
-   REACH (globe section)
-   ============================================ */
-.reach {
-  position: relative;
-  min-height: 70vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-.globe-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-.reach-inner {
-  position: relative;
-  z-index: 2;
-}
-.reach-sub {
-  margin-top: 20px;
-  color: var(--muted);
-  max-width: 480px;
-  font-size: 17px;
-}
-
-/* ============================================
-   CTA
-   ============================================ */
-.cta-section {
-  padding: 160px 0 180px;
-  text-align: center;
-}
-.cta-inner { display: flex; flex-direction: column; align-items: center; }
-.cta-inner .section-title { max-width: 640px; }
-.cta-sub {
-  margin-top: 18px;
-  color: var(--muted);
-  font-size: 17px;
-}
-.cta-inner .btn { margin-top: 36px; }
-
-/* ============================================
-   FOOTER
-   ============================================ */
-.site-footer {
-  border-top: 1px solid var(--panel-line);
-  padding: 40px 0;
-}
-.footer-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-.footer-nav { display: flex; gap: 24px; }
-.footer-nav a { font-size: 14px; color: var(--muted); }
-.footer-nav a:hover { color: var(--paper); }
-.footer-copy { font-size: 12px; color: var(--muted); }
-
-/* ============================================
-   RESPONSIVE
-   ============================================ */
-@media (max-width: 860px) {
-  .main-nav { display: none; }
-  .nav-toggle { display: flex; }
-  .sector-grid { grid-template-columns: 1fr; }
-  .thread { padding-left: 20px; }
-}
-/* ============================================
-   SPLINE 3D INTEGRATION
+   SPLINE 3D INTEGRATION (YENİ HİBRİT KATMAN SİSTEMİ)
    ============================================ */
 
-/* 3D Modelin duracağı sabit arka plan katmanı */
 #canvas-container {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Ekranın tam ortasına yerleştirir */
-    width: 600px;  /* Genişlik (Masaüstü için ideal boyut, istediğiniz gibi değiştirebilirsiniz) */
-    height: 600px; /* Yükseklik */
-    z-index: 5;    /* İçeriklerin arkasında ama arka planın önünde durması için ara katman */
+    width: 480px;   /* Sürüklenebilir ideal kompakt boyut */
+    height: 480px;
+    z-index: 99999; /* Sitedeki her şeyin, menülerin dahi en üst katmanı */
     overflow: hidden;
-    cursor: grab;  /* Kullanıcıya tutulabilir olduğunu gösteren el ikonu */
+    cursor: grab;   /* Üzerine gelince tutulabilir el ikonu */
     user-select: none;
+    pointer-events: none; /* Boşluklarda arkadaki site elementlerine tıklanabilsin */
+    
+    /* İlk açılışta ekranın tam ortasında transform çakışması olmaması için merkeze alma */
+    margin-left: -240px; 
+    margin-top: -240px;
 }
 
-#canvas-container:active {
-    cursor: grabbing; /* Tutulduğunda yumruk ikonu olur */
-}
-
+/* Sadece spline-viewer elemanının kendisi tıklamaları yakalayabilsin (Sürükleme için) */
 #canvas-container spline-viewer {
     width: 100%;
     height: 100%;
+    pointer-events: auto; 
 }
+
+#canvas-container:active, 
+#canvas-container.dragging {
+    cursor: grabbing; /* Tutulduğu an el yumruk şeklini alır */
+}
+
 /* Ön taraftaki site içeriklerinin katmanı */
 #site-content {
     position: relative;
-    z-index: 10; /* Yazılar ve butonlar ajanın da önünde kalmalı ki okunabilsin */
+    z-index: 10; 
     width: 100%;
-    pointer-events: none; 
+    pointer-events: auto; /* İçeriklerin normal tıklama davranışları korundu */
 }
 
-/* Sitedeki tüm tıklanabilir elementleri aktif tutuyoruz */
-#site-content a, 
-#site-content button, 
-#site-content input,
-#site-content textarea,
-.sector-card,
-.thread-step,
-.site-header,
-.site-footer {
-    pointer-events: auto;
-}
-
-/* Arka planları şeffaflaştırıyoruz */
+/* Arka plan akıcılığı ve ajan görünebilirliği için katman şeffaflıkları */
 .hero, .process, .sectors, .reach, .cta-section {
     background: transparent !important;
 }
@@ -471,11 +45,11 @@ a:focus-visible, button:focus-visible {
 .idea-moment {
     position: relative;
     padding: 160px 0;
-    background: rgba(20, 31, 27, 0.2) !important; /* Ajan altından geçerken çok kapanmasın diye opaklığı düşürdük */
-    backdrop-filter: blur(4px); 
+    background: rgba(20, 31, 27, 0.4) !important; 
+    backdrop-filter: blur(8px); 
     border-top: 1px solid var(--panel-line);
     border-bottom: 1px solid var(--panel-line);
     overflow: hidden;
     text-align: center;
-    z-index: 11; /* Cam efektli bölüm ajanın üstünü örtsün (derinlik hissi için) */
+    z-index: 20; 
 }

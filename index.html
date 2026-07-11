@@ -12,183 +12,181 @@
 </head>
 <body>
 
-<div class="noise-overlay"></div>
+<div id="canvas-container">
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.98/build/spline-viewer.js"></script>
+  <spline-viewer url="https://prod.spline.design/JyTLXVLbXCHpa7iT/scene.splinecode"></spline-viewer>
+</div>
 
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a href="#top" class="logo">AGE<span>Tegration</span></a>
-    <nav class="main-nav">
-      <a href="#nasil-calisir">Nasıl Çalışır</a>
-      <a href="#sektorler">Sektörler</a>
-      <a href="#iletisim" class="nav-cta">Demo Talep Et</a>
-    </nav>
-    <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
+<div id="site-content">
 
-<main id="top">
+  <div class="noise-overlay"></div>
 
-  <!-- HERO -->
-  <section class="hero">
-    <canvas id="brainCanvas" class="hero-canvas" aria-hidden="true"></canvas>
-    <div class="wrap hero-inner">
-      <p class="eyebrow mono">7 / 24 ÇALIŞAN YAPAY ZEKA AJANLARI</p>
-      <h1 class="hero-title">Telefon çaldığında,<br>cevap hazır.</h1>
-      <p class="hero-sub">AGE Tegration; arayan ya da yazan müşterinizi karşılayan, bilgi toplayan, yönlendiren ve işlemi tamamlayan yapay zeka ajanları kurar. Siz uyurken de işiniz durmaz.</p>
-      <div class="hero-actions">
-        <a href="#iletisim" class="btn btn-primary">Demo Talep Et</a>
-        <a href="#sektorler" class="btn btn-ghost">Sektörünüzü görün ↓</a>
-      </div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="#top" class="logo">AGE<span>Tegration</span></a>
+      <nav class="main-nav">
+        <a href="#nasil-calisir">Nasıl Çalışır</a>
+        <a href="#sektorler">Sektörler</a>
+        <a href="#iletisim" class="nav-cta">Demo Talep Et</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Menüyü aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </section>
+  </header>
 
-  <!-- SÜREÇ / SIGNATURE THREAD -->
-  <section class="process" id="nasil-calisir">
-    <div class="wrap">
-      <p class="eyebrow mono">NASIL ÇALIŞIR</p>
-      <h2 class="section-title">Her çağrının bir yolculuğu vardır.</h2>
-    </div>
+  <main id="top">
 
-    <div class="thread wrap">
-      <div class="thread-line" aria-hidden="true"><span class="thread-progress"></span></div>
-
-      <div class="thread-step" data-step="1">
-        <div class="thread-marker mono">01</div>
-        <div class="thread-content">
-          <h3>Gelen Talep</h3>
-          <p>Müşteri arar, yazar, SMS ya da form gönderir. Ajan ilk saniyeden itibaren devrede.</p>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <p class="eyebrow mono">7 / 24 ÇALIŞAN YAPAY ZEKA AJANLARI</p>
+        <h1 class="hero-title">Telefon çaldığında,<br>cevap hazır.</h1>
+        <p class="hero-sub">AGE Tegration; arayan ya da yazan müşterinizi karşılayan, bilgi toplayan, yönlendiren ve işlemi tamamlayan yapay zeka ajanları kurar. Siz uyurken de işiniz durmaz.</p>
+        <div class="hero-actions">
+          <a href="#iletisim" class="btn btn-primary">Demo Talep Et</a>
+          <a href="#sektorler" class="btn btn-ghost">Sektörünüzü görün ↓</a>
         </div>
       </div>
+    </section>
 
-      <div class="thread-step" data-step="2">
-        <div class="thread-marker mono">02</div>
-        <div class="thread-content">
-          <h3>Yapay Zeka Karşılar</h3>
-          <p>İhtiyacı anlar, gerekli bilgileri toplar, doğru kişiye ya da sürece yönlendirir.</p>
-        </div>
+    <section class="process" id="nasil-calisir">
+      <div class="wrap">
+        <p class="eyebrow mono">NASIL ÇALIŞIR</p>
+        <h2 class="section-title">Her çağrının bir yolculuğu vardır.</h2>
       </div>
 
-      <div class="thread-step" data-step="3">
-        <div class="thread-marker mono">03</div>
-        <div class="thread-content">
-          <h3>Aksiyon Alınır</h3>
-          <p>Ödeme tahsil edilir, usta çağrılır, randevu ayarlanır ya da satış tamamlanır — insan beklemeden.</p>
+      <div class="thread wrap">
+        <div class="thread-line" aria-hidden="true"><span class="thread-progress"></span></div>
+
+        <div class="thread-step" data-step="1">
+          <div class="thread-marker mono">01</div>
+          <div class="thread-content">
+            <h3>Gelen Talep</h3>
+            <p>Müşteri arar, yazar, SMS ya da form gönderir. Ajan ilk saniyeden itibaren devrede.</p>
+          </div>
+        </div>
+
+        <div class="thread-step" data-step="2">
+          <div class="thread-marker mono">02</div>
+          <div class="thread-content">
+            <h3>Yapay Zeka Karşılar</h3>
+            <p>İhtiyacı anlar, gerekli bilgileri toplar, doğru kişiye ya da sürece yönlendirir.</p>
+          </div>
+        </div>
+
+        <div class="thread-step" data-step="3">
+          <div class="thread-marker mono">03</div>
+          <div class="thread-content">
+            <h3>Aksiyon Alınır</h3>
+            <p>Ödeme tahsil edilir, usta çağrılır, randevu ayarlanır ya da satış tamamlanır — insan beklemeden.</p>
+          </div>
+        </div>
+
+        <div class="thread-step" data-step="4">
+          <div class="thread-marker mono">04</div>
+          <div class="thread-content">
+            <h3>Sonuç Bildirilir</h3>
+            <p>İlgili kişiye — avukata, yönetime, veliye, mağazaya — sonuç anında ulaşır.</p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="thread-step" data-step="4">
-        <div class="thread-marker mono">04</div>
-        <div class="thread-content">
-          <h3>Sonuç Bildirilir</h3>
-          <p>İlgili kişiye — avukata, yönetime, veliye, mağazaya — sonuç anında ulaşır.</p>
-        </div>
+    <section class="idea-moment">
+      <div class="wrap idea-inner">
+        <h2 class="section-title">Her sektörün kendine has bir sorunu var.<br>Ajan, o soruna göre şekillenir.</h2>
+        <p class="idea-sub">Hazır bir şablon satmıyoruz. İşletmenizin gerçek sürecini öğrenip, ona göre bir ajan kuruyoruz.</p>
       </div>
+    </section>
+
+    <section class="sectors" id="sektorler">
+      <div class="wrap">
+        <p class="eyebrow mono">SEKTÖRLER</p>
+        <h2 class="section-title">Sizin sektörünüzde nasıl çalışır?</h2>
+      </div>
+
+      <div class="sector-grid wrap">
+        <article class="sector-card">
+          <div class="sector-head">
+            <span class="sector-tag mono">HUKUK BÜROLARI</span>
+          </div>
+          <h3>Müşteri bilgisini alır, avukata yönlendirir, ödemeyi tahsil eder.</h3>
+          <div class="transcript mono">
+            <p><span class="t-in">Gelen çağrı</span> "Merhaba, boşanma davası için bilgi almak istiyordum..."</p>
+            <p><span class="t-agent">Ajan</span> Sizi doğru avukatımıza yönlendiriyorum, önce birkaç bilgi alabilir miyim?</p>
+            <p><span class="t-sys">Sistem</span> Ödeme alındı → Avukat bilgilendirildi</p>
+          </div>
+        </article>
+
+        <article class="sector-card">
+          <div class="sector-head">
+            <span class="sector-tag mono">EMLAK YÖNETİMİ</span>
+          </div>
+          <h3>Kiracının arızasını anında bir ustaya bağlar, yönetimi bilgilendirir.</h3>
+          <div class="transcript mono">
+            <p><span class="t-in">Gelen çağrı</span> "Merhaba, dairede su kaçağı var..."</p>
+            <p><span class="t-agent">Ajan</span> Anlıyorum, size en yakın uygun ustayı şimdi yönlendiriyorum.</p>
+            <p><span class="t-sys">Sistem</span> Usta atandı → Yönetim bilgilendirildi</p>
+          </div>
+        </article>
+
+        <article class="sector-card">
+          <div class="sector-head">
+            <span class="sector-tag mono">OKULLAR</span>
+          </div>
+          <h3>Kayıt döneminde velilere hatırlatmayı unutmaz, takibini yapar.</h3>
+          <div class="transcript mono">
+            <p><span class="t-sys">Sistem</span> Kayıt dönemi başladı → Veli listesi tarandı</p>
+            <p><span class="t-agent">Ajan</span> "Sayın veli, 2026-2027 kayıt yenileme tarihiniz yaklaşıyor..."</p>
+            <p><span class="t-sys">Sistem</span> 214 SMS gönderildi → Yanıt oranı takipte</p>
+          </div>
+        </article>
+
+        <article class="sector-card">
+          <div class="sector-head">
+            <span class="sector-tag mono">MOBİLYA MAĞAZASI</span>
+          </div>
+          <h3>Ürün hakkında konuşur, pazarlık yapar, satışı stoktan düşer.</h3>
+          <div class="transcript mono">
+            <p><span class="t-in">Gelen çağrı</span> "Sitedeki gri kanepe hâlâ satışta mı?"</p>
+            <p><span class="t-agent">Ajan</span> Evet, stokta 1 adet var. Kampanya fiyatımız...</p>
+            <p><span class="t-sys">Sistem</span> Satış tamamlandı → Stok güncellendi</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="reach">
+      <div class="wrap reach-inner">
+        <p class="eyebrow mono">HER ZAMAN AÇIK</p>
+        <h2 class="section-title">Mesai saati yok. Tatil yok. Bekleme yok.</h2>
+        <p class="reach-sub">Kendi altyapımızla kurduğumuz sistemler gece yarısı da, bayram tatilinde de aynı hızda çalışır.</p>
+      </div>
+    </section>
+
+    <section class="cta-section" id="iletisim">
+      <div class="wrap cta-inner">
+        <h2 class="section-title">İşletmeniz için bir ajan tasarlayalım.</h2>
+        <p class="cta-sub">Sürecinizi anlatın, size özel çözümü birlikte kurgulayalım.</p>
+        <a href="mailto:info@agetegration.com" class="btn btn-primary btn-large">info@agetegration.com</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a href="#top" class="logo">AGE<span>Tegration</span></a>
+      <nav class="footer-nav">
+        <a href="#nasil-calisir">Nasıl Çalışır</a>
+        <a href="#sektorler">Sektörler</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+      <p class="footer-copy mono">© 2026 AGE Tegration. Tüm hakları saklıdır.</p>
     </div>
-  </section>
+  </footer>
 
-  <!-- LIGHTBULB MOMENT -->
-  <section class="idea-moment">
-    <canvas id="bulbCanvas" class="idea-canvas" aria-hidden="true"></canvas>
-    <div class="wrap idea-inner">
-      <h2 class="section-title">Her sektörün kendine has bir sorunu var.<br>Ajan, o soruna göre şekillenir.</h2>
-      <p class="idea-sub">Hazır bir şablon satmıyoruz. İşletmenizin gerçek sürecini öğrenip, ona göre bir ajan kuruyoruz.</p>
-    </div>
-  </section>
-
-  <!-- SEKTÖRLER -->
-  <section class="sectors" id="sektorler">
-    <div class="wrap">
-      <p class="eyebrow mono">SEKTÖRLER</p>
-      <h2 class="section-title">Sizin sektörünüzde nasıl çalışır?</h2>
-    </div>
-
-    <div class="sector-grid wrap">
-
-      <article class="sector-card">
-        <div class="sector-head">
-          <span class="sector-tag mono">HUKUK BÜROLARI</span>
-        </div>
-        <h3>Müşteri bilgisini alır, avukata yönlendirir, ödemeyi tahsil eder.</h3>
-        <div class="transcript mono">
-          <p><span class="t-in">Gelen çağrı</span> "Merhaba, boşanma davası için bilgi almak istiyordum..."</p>
-          <p><span class="t-agent">Ajan</span> Sizi doğru avukatımıza yönlendiriyorum, önce birkaç bilgi alabilir miyim?</p>
-          <p><span class="t-sys">Sistem</span> Ödeme alındı → Avukat bilgilendirildi</p>
-        </div>
-      </article>
-
-      <article class="sector-card">
-        <div class="sector-head">
-          <span class="sector-tag mono">EMLAK YÖNETİMİ</span>
-        </div>
-        <h3>Kiracının arızasını anında bir ustaya bağlar, yönetimi bilgilendirir.</h3>
-        <div class="transcript mono">
-          <p><span class="t-in">Gelen çağrı</span> "Merhaba, dairede su kaçağı var..."</p>
-          <p><span class="t-agent">Ajan</span> Anlıyorum, size en yakın uygun ustayı şimdi yönlendiriyorum.</p>
-          <p><span class="t-sys">Sistem</span> Usta atandı → Yönetim bilgilendirildi</p>
-        </div>
-      </article>
-
-      <article class="sector-card">
-        <div class="sector-head">
-          <span class="sector-tag mono">OKULLAR</span>
-        </div>
-        <h3>Kayıt döneminde velilere hatırlatmayı unutmaz, takibini yapar.</h3>
-        <div class="transcript mono">
-          <p><span class="t-sys">Sistem</span> Kayıt dönemi başladı → Veli listesi tarandı</p>
-          <p><span class="t-agent">Ajan</span> "Sayın veli, 2026-2027 kayıt yenileme tarihiniz yaklaşıyor..."</p>
-          <p><span class="t-sys">Sistem</span> 214 SMS gönderildi → Yanıt oranı takipte</p>
-        </div>
-      </article>
-
-      <article class="sector-card">
-        <div class="sector-head">
-          <span class="sector-tag mono">MOBİLYA MAĞAZASI</span>
-        </div>
-        <h3>Ürün hakkında konuşur, pazarlık yapar, satışı stoktan düşer.</h3>
-        <div class="transcript mono">
-          <p><span class="t-in">Gelen çağrı</span> "Sitedeki gri kanepe hâlâ satışta mı?"</p>
-          <p><span class="t-agent">Ajan</span> Evet, stokta 1 adet var. Kampanya fiyatımız...</p>
-          <p><span class="t-sys">Sistem</span> Satış tamamlandı → Stok güncellendi</p>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- GLOBE / GÜVEN -->
-  <section class="reach">
-    <canvas id="globeCanvas" class="globe-canvas" aria-hidden="true"></canvas>
-    <div class="wrap reach-inner">
-      <p class="eyebrow mono">HER ZAMAN AÇIK</p>
-      <h2 class="section-title">Mesai saati yok. Tatil yok. Bekleme yok.</h2>
-      <p class="reach-sub">Kendi altyapımızla kurduğumuz sistemler gece yarısı da, bayram tatilinde de aynı hızda çalışır.</p>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-section" id="iletisim">
-    <div class="wrap cta-inner">
-      <h2 class="section-title">İşletmeniz için bir ajan tasarlayalım.</h2>
-      <p class="cta-sub">Sürecinizi anlatın, size özel çözümü birlikte kurgulayalım.</p>
-      <a href="mailto:info@agetegration.com" class="btn btn-primary btn-large">info@agetegration.com</a>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <a href="#top" class="logo">AGE<span>Tegration</span></a>
-    <nav class="footer-nav">
-      <a href="#nasil-calisir">Nasıl Çalışır</a>
-      <a href="#sektorler">Sektörler</a>
-      <a href="#iletisim">İletişim</a>
-    </nav>
-    <p class="footer-copy mono">© 2026 AGE Tegration. Tüm hakları saklıdır.</p>
-  </div>
-</footer>
+</div>
 
 <script src="main.js"></script>
 </body>

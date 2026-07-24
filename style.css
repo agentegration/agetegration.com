@@ -487,3 +487,23 @@ body {
     width: 100%;
     pointer-events: auto; 
 }
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  margin-left: 15px;
+}
+
+.lang-btn {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+  color: #ffffff;
+  font-weight: 600;
+}
